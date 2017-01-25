@@ -88,8 +88,10 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Injected\RatingModalView.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="UIUtils.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +144,36 @@
       <Project>{0058dc3c-ba38-41d4-819e-8055c39c9131}</Project>
       <Name>listviewratings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bluestar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\emptystar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\greenstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\orangestar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\purplestar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\yellowstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cyber1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cyber2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\who.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

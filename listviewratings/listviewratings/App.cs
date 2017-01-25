@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using listviewratings.UI;
 
 using Xamarin.Forms;
 
@@ -9,25 +6,26 @@ namespace listviewratings
 {
     public class App : Application
     {
+        public static Size ScreenSize { get; set; }
+        public static App Self { get; private set; }
+
+        int newIconRating;
+        public int NewIconRating
+        {
+            get { return newIconRating; }
+            set
+            {
+                newIconRating = value;
+                OnPropertyChanged("NewIconRating");
+            }
+        }
+
+        public int IdInUse { get; set; }
+
         public App()
         {
-            // The root page of your application
-            var content = new ContentPage
-            {
-                Title = "listviewratings",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
-
-            MainPage = new NavigationPage(content);
+            App.Self = this;
+            MainPage = new NavigationPage(new ListviewData());
         }
 
         protected override void OnStart()
